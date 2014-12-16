@@ -19,10 +19,19 @@ package org.optaconf.domain;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 @XStreamAlias("ShiftType")
-public class ShiftType extends AbstractPersistable {
+public class ShiftType extends org.optaconf.common.domain.AbstractPersistable {
 
     private String code;
-    private int index;
+
+    public ShiftType(Long id, String code, String startTimeString, String endTimeString, boolean night, String description) {
+        this.code = code;
+        this.id = id;
+        this.startTimeString = startTimeString;
+        this.endTimeString = endTimeString;
+        this.night = night;
+        this.description = description;
+    }
+
     private String startTimeString;
     private String endTimeString;
     private boolean night;
@@ -34,14 +43,6 @@ public class ShiftType extends AbstractPersistable {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
     }
 
     public String getStartTimeString() {

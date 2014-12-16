@@ -28,6 +28,14 @@ import org.optaconf.common.domain.AbstractPersistable;
         FreeBefore2DaysWithAWorkDayPattern.class
 })
 public abstract class Pattern extends AbstractPersistable {
+    protected Pattern() {
+    }
+
+    protected Pattern(long id, String code, int weight) {
+        super(id);
+        this.code = code;
+        this.weight = weight;
+    }
 
     protected String code;
     protected int weight;
@@ -52,5 +60,4 @@ public abstract class Pattern extends AbstractPersistable {
     public String toString() {
         return code;
     }
-
 }

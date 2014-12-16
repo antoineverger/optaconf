@@ -19,6 +19,7 @@ package org.optaconf.domain;
 import java.util.Map;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import org.optaconf.common.domain.*;
 import org.optaconf.domain.request.DayOffRequest;
 import org.optaconf.domain.contract.Contract;
 import org.optaconf.domain.request.DayOffRequest;
@@ -27,7 +28,21 @@ import org.optaconf.domain.request.ShiftOffRequest;
 import org.optaconf.domain.request.ShiftOnRequest;
 
 @XStreamAlias("Employee")
-public class Employee extends AbstractPersistable {
+public class Employee extends org.optaconf.common.domain.AbstractPersistable {
+
+    /**
+     * Construct an employee
+     * @param id
+     * @param name
+     * @param code
+     * @param contract
+     */
+    public Employee(Long id, String name, String code, Contract contract) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.contract = contract;
+    }
 
     private String code;
     private String name;

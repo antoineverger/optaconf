@@ -23,6 +23,12 @@ import org.optaconf.domain.pattern.Pattern;
 @XStreamAlias("PatternContractLine")
 public class PatternContractLine extends AbstractPersistable {
 
+    public PatternContractLine(long id, Contract contract, Pattern pattern) {
+        super(id);
+        this.contract = contract;
+        this.pattern = pattern;
+    }
+
     private Contract contract;
     private Pattern pattern;
 

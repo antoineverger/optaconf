@@ -18,7 +18,6 @@ package org.optaconf.domain.pattern;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaconf.domain.ShiftType;
-import org.optaconf.domain.pattern.Pattern;
 
 @XStreamAlias("ShiftType3DaysPattern")
 public class ShiftType3DaysPattern extends Pattern {
@@ -26,6 +25,13 @@ public class ShiftType3DaysPattern extends Pattern {
     private ShiftType dayIndex0ShiftType;
     private ShiftType dayIndex1ShiftType;
     private ShiftType dayIndex2ShiftType;
+
+    public ShiftType3DaysPattern(Long id, String code, int weight, ShiftType dayIndex0ShiftType, ShiftType dayIndex1ShiftType, ShiftType dayIndex2ShiftType) {
+        super(id, code, weight);
+        this.dayIndex0ShiftType = dayIndex0ShiftType;
+        this.dayIndex1ShiftType = dayIndex1ShiftType;
+        this.dayIndex2ShiftType = dayIndex2ShiftType;
+    }
 
     public ShiftType getDayIndex0ShiftType() {
         return dayIndex0ShiftType;

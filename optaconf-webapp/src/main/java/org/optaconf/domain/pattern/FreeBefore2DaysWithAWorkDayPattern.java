@@ -18,12 +18,16 @@ package org.optaconf.domain.pattern;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaconf.domain.DayOfWeek;
-import org.optaconf.domain.pattern.Pattern;
 
 @XStreamAlias("FreeBefore2DaysWithAWorkDayPattern")
 public class FreeBefore2DaysWithAWorkDayPattern extends Pattern {
 
     private DayOfWeek freeDayOfWeek;
+
+    public FreeBefore2DaysWithAWorkDayPattern(long id, String code, int weight, DayOfWeek freeDayOfWeek) {
+        super(id, code, weight);
+        this.freeDayOfWeek = freeDayOfWeek;
+    }
 
     public DayOfWeek getFreeDayOfWeek() {
         return freeDayOfWeek;

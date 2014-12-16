@@ -25,6 +25,12 @@ public class SkillProficiency extends org.optaconf.common.domain.AbstractPersist
     private Employee employee;
     private Skill skill;
 
+    public SkillProficiency(long id, Employee employee, Skill skill) {
+        super(id);
+        this.employee = employee;
+        this.skill = skill;
+    }
+
     public Employee getEmployee() {
         return employee;
     }

@@ -26,6 +26,12 @@ public class ShiftType2DaysPattern extends Pattern {
     private ShiftType dayIndex0ShiftType;
     private ShiftType dayIndex1ShiftType;
 
+    public ShiftType2DaysPattern(long id, String code, int weight, ShiftType dayIndex0ShiftType, ShiftType dayIndex1ShiftType) {
+        super(id, code, weight);
+        this.dayIndex0ShiftType = dayIndex0ShiftType;
+        this.dayIndex1ShiftType = dayIndex1ShiftType;
+    }
+
     public ShiftType getDayIndex0ShiftType() {
         return dayIndex0ShiftType;
     }

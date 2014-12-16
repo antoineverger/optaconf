@@ -25,6 +25,14 @@ import org.optaconf.domain.WeekendDefinition;
 @XStreamAlias("Contract")
 public class Contract extends AbstractPersistable {
 
+    public Contract(long id, String code, String description, WeekendDefinition weekendDefinition, List<ContractLine> contractLineList) {
+        super(id);
+        this.code = code;
+        this.description = description;
+        this.weekendDefinition = weekendDefinition;
+        this.contractLineList = contractLineList;
+    }
+
     private String code;
     private String description;
     private WeekendDefinition weekendDefinition;
