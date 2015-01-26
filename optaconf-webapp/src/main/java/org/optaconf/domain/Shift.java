@@ -26,6 +26,14 @@ public class Shift extends org.optaconf.common.domain.AbstractPersistable {
     private ShiftType shiftType;
     private int index;
 
+    public Shift(long id, ShiftDate shiftDate, ShiftType shiftType, int index, int requiredEmployeeSize) {
+        super(id);
+        this.shiftDate = shiftDate;
+        this.shiftType = shiftType;
+        this.index = index;
+        this.requiredEmployeeSize = requiredEmployeeSize;
+    }
+
     private int requiredEmployeeSize;
 
     public ShiftDate getShiftDate() {
